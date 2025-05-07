@@ -19,7 +19,7 @@ namespace NileshWebApi.Controllers
             dbcontext = _dbcontext;
         }
      
-        [HttpGet("GetAllOrders")]
+        [HttpGet]
         public List<Order> GetAllOder()
         {
             List<Order> orders = new List<Order>();
