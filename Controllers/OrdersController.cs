@@ -18,18 +18,30 @@ namespace NileshWebApi.Controllers
         {
             dbcontext = _dbcontext;
         }
-     
+
         [HttpGet]
-        public List<Order> GetAllOder()
+        public ActionResult<List<Order>> GetAllOder()
         {
-            List<Order> orders = new List<Order>();
-            var oder=dbcontext.Orders.Where(order=>order.Isdeleted==0);
-            if (oder.Any())
+            try
             {
-                orders=oder.ToList();
+                var orders = dbcontext.Orders
+                    .Where(order => order.Isdeleted == 0)
+                    .ToList();
+
+                if (orders == null || orders.Count == 0)
+                {
+                    return NotFound("No orders found.");
+                }
+
+                return Ok(orders);
             }
-            return orders;
+            catch (Exception ex)
+            {
+                // Log the exception (optional: use ILogger)
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
         }
+
 
         [HttpDelete("{id}")]
         public ActionResult Delete(int id)
