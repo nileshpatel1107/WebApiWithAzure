@@ -138,3 +138,4 @@ C:\Users\sit440\source\repos\NileshWebApi\NileshWebApi\obj\Debug\net8.0\staticwe
 C:\Users\sit440\source\repos\NileshWebApi\NileshWebApi\obj\Debug\net8.0\staticwebassets\msbuild.NileshWebApi.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
 C:\Users\sit440\source\repos\NileshWebApi\NileshWebApi\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\sit440\source\repos\NileshWebApi\NileshWebApi\obj\Debug\net8.0\NileshWe.34BB9BEA.Up2Date
+C:\Users\sit440\source\repos\NileshWebApi\NileshWebApi\obj\Debug\net8.0\NileshWebApi.sourcelink.json

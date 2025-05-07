@@ -69,7 +69,7 @@ namespace NileshWebApi.Controllers
 
 
         [HttpGet]
-        [ActionClass("Action")]
+        
         public async Task<ActionResult<IEnumerable<Order>>> GetOrders()
         {
             var orders = await dbcontext.

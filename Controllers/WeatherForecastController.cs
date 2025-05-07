@@ -9,7 +9,7 @@ namespace NileshWebApi.Controllers
     {
         private static readonly string[] Summaries = new[]
         {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+            "Freezing123", "Bracing123", "Chilly123", "Cool123", "Mild123", "Warm123", "Balmy123", "Hot123", "Sweltering123", "Scorching3"
         };
 
         private readonly ILogger<WeatherForecastController> _logger;
