@@ -18,7 +18,7 @@ builder.Services.AddControllers(options =>
 
 // Configure the DbContext
 builder.Services.AddDbContext<ExamContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("dbcs")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 
 

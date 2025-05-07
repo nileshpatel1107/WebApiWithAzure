@@ -190,7 +190,7 @@
         }
       }
     },
-    "/api/Orders": {
+    "/api/Orders/GetAllOrders": {
       "get": {
         "tags": [
           "Orders"

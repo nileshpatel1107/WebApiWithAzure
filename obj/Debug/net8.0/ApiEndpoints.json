@@ -110,26 +110,6 @@
   },
   {
     "ContainingType": "NileshWebApi.Controllers.OrdersController",
-    "Method": "GetAllOder",
-    "RelativePath": "api/Orders",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.List\u00601[[NileshWebApi.Models.Order, NileshWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "NileshWebApi.Controllers.OrdersController",
     "Method": "Delete",
     "RelativePath": "api/Orders/{id}",
     "HttpMethod": "DELETE",
@@ -161,6 +141,26 @@
     "ReturnTypes": [
       {
         "Type": "NileshWebApi.Models.Order",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "NileshWebApi.Controllers.OrdersController",
+    "Method": "GetAllOder",
+    "RelativePath": "api/Orders/GetAllOrders",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[NileshWebApi.Models.Order, NileshWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

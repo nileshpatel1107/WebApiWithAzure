@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NileshWebApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e3b1c40b8e1b120e1e3f7266535da106c17f49d9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f0780bae09dbaed8fa44a9e9f05ada3d7c5791b2")]
 [assembly: System.Reflection.AssemblyProductAttribute("NileshWebApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NileshWebApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
