@@ -1,4 +1,7 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Identity.Web;
+using NileshWebApi;
 using NileshWebApi.Filters;
 using NileshWebApi.Models;
 using System.Text.Json.Serialization;
@@ -24,6 +27,7 @@ builder.Services.AddDbContext<ExamContext>(options =>
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddHostedService<EmailService>();
 // Configure CORS
 builder.Services.AddCors(options =>
 {
@@ -38,7 +42,13 @@ builder.Services.AddCors(options =>
                  .AllowAnyMethod() // Allow GET, POST, PUT, DELETE
                  .AllowAnyHeader(); // Allow all headers
         });
+
+   
 });
+// Add Azure AD authentication for JWT
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddMicrosoftIdentityWebApi(builder.Configuration.GetSection("AzureAd"));
+
 
 var app = builder.Build();
 app.UseCors("AllowAll");
