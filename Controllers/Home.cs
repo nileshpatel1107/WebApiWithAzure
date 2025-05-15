@@ -65,7 +65,10 @@ namespace NileshWebApi.Controllers
 
         //        return result;
         //    }
-
+        public async Task<IActionResult> Index()
+        {
+           return StatusCode(500, new { message = "An error occurred", error = ex.Message });
+        }
 
 
         [HttpGet]

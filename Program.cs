@@ -4,6 +4,7 @@ using Microsoft.Identity.Web;
 using NileshWebApi;
 using NileshWebApi.Filters;
 using NileshWebApi.Models;
+using System.Security.Claims;
 using System.Text.Json.Serialization;
 var builder = WebApplication.CreateBuilder(args);
 
@@ -49,6 +50,12 @@ builder.Services.AddCors(options =>
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddMicrosoftIdentityWebApi(builder.Configuration.GetSection("AzureAd"));
 
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("AdminOnly", policy => policy.RequireClaim(ClaimTypes.Role, "Admin"));
+    options.AddPolicy("ITOnly", policy => policy.RequireClaim("Department", "IT"));
+    options.AddPolicy("CanWriteChat", policy => policy.RequireClaim("Permission", "Chat.Write"));
+});
 
 var app = builder.Build();
 app.UseCors("AllowAll");
